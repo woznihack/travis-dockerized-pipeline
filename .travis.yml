@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build . -t builder-image --target=builder
+  - docker run -it builder mvn test
+install:
+  - docker build . -t finalimagename:latest
+scripts:
+  - echo "This is supposed to be a deploy step"
