@@ -5,7 +5,7 @@ services:
 
 before_install:
   - docker build . -t builder-image --target=builder
-  - docker run -it builder mvn test
+  - docker run -it builder-image mvn test
 install:
   - docker build . -t finalimagename:latest
 scripts:
