@@ -9,4 +9,4 @@ before_install:
 install:
   - docker build . -t finalimagename:latest
 scripts:
-  - echo "This is supposed to be a deploy step"
+  - /bin/bash -c "echo \"This is supposed to be a deploy step\""
