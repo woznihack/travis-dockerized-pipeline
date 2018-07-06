@@ -1,0 +1,1 @@
+This is an example on how to leverage docker multi-steps builds to create a travis CI/CD pipeline
